@@ -1,0 +1,9 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="burger-menu" viewBox="0 0 71 32">
+<path d="M0 0h70.737v5.053h-70.737v-5.053z"></path>
+<path d="M0 13.474h70.737v5.053h-70.737v-5.053z"></path>
+<path d="M0 26.947h70.737v5.053h-70.737v-5.053z"></path>
+</symbol>
+</defs>
+</svg>
