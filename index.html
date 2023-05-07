@@ -44,8 +44,22 @@
                 <h1 id="title" class="main-title">Фестиваль Перемоги України</h1>
                 <p class="hero__text">Свято для усіх українців, які працювали, боролися й вірили у перемогу</p>
             </div>
-            <img class="hero__img" src="./images/Img-mobile.png" alt="жінка з флагом">
-            <img class="hero__background" src="./images/Img-back-desktop-001.png" alt="none">
+            <!-- <picture class="hero__img">
+                <source srcset="./images/Img-desktop.png 1x, ./images/Img-desktop-@2x.png 2x" media="(min-width: 1440px)"
+                    type="image/png">
+                <source srcset="./images/Img-mobile.png 1x, ./images/Img-mobile-@2x.png 2x" media="(max-width: 1439px)"
+                    type="image/png">
+                <img src="./images/Img-mobile.png" alt="Жінка з флагом">
+                </picture> -->
+            <picture class="hero__background">
+                <source srcset="./images/Img-back-desktop-001.png 1x, ./images/Img-back-desktop-@2x-001.png 2x" media="(min-width: 1440px)"
+                    type="image/png">
+                <source srcset="./images/Img-back-mobile-001.png 1x, ./images/Img-back-mobile-@2x-001.png 2x" media="(max-width: 1439px)"
+                    type="image/png">
+                <img src="./images/Img-mobile.png" alt="none">
+            </picture>
+            <!-- <img class="hero__img" src="./images/Img-mobile.png" alt="Жінка з флагом"> -->
+            <!-- <img class="hero__background" src="./images/Img-back-desktop-001.png" alt="none"> -->
         </section>
         <!--PROJECTS-->
         <section class="container project-container">
@@ -77,7 +91,13 @@
                                 </li>
                             </ul>
                         </div>
-                        <img class="program__img" src="./images/scene-desktop-001.jpg" alt="Сцена №1">
+                        <picture class="program__img">
+                            <source srcset="./images/scene-desktop-001.jpg 1x, ./images/scene-desktop-@2x-001.jpg 2x" media="(min-width: 1440px)"
+                                type="image/jpg">
+                            <source srcset="./images/scene-mobile-001.jpg 1x, ./images/scene-mobile-@2x-001.jpg 2x" media="(max-width: 1439px)"
+                                type="image/jpg">
+                            <img src="./images/scene-mobile-001.jpg" alt="Сцена №1">
+                        </picture>
                     </div>
                 </li>
                 <li class="program-fest__items list">
@@ -111,7 +131,13 @@
                                 </li>
                             </ul>
                         </div>
-                        <img class="program__img" src="./images/scene-desktop-002.jpg" alt="Сцена №2">
+                        <picture class="program__img">
+                            <source srcset="./images/scene-desktop-002.jpg 1x, ./images/scene-desktop-@2x-002.jpg 2x"
+                                media="(min-width: 1440px)" type="image/jpg">
+                            <source srcset="./images/scene-mobile-002.jpg 1x, ./images/scene-mobile-@2x-002.jpg 2x" media="(max-width: 1439px)"
+                                type="image/jpg">
+                            <img src="./images/scene-mobile-002.jpg" alt="Сцена №2">
+                        </picture>
                     </div>
                 </li>
                 <li class="program-fest__items list">
@@ -141,7 +167,13 @@
                                 </li>
                             </ul>
                         </div>
-                        <img class="program__img" src="./images/scene-desktop-003.jpg" alt="Сцена №3">
+                        <picture class="program__img">
+                            <source srcset="./images/scene-desktop-003.jpg 1x, ./images/scene-desktop-@2x-003.jpg 2x"
+                                media="(min-width: 1440px)" type="image/jpg">
+                            <source srcset="./images/scene-mobile-003.jpg 1x, ./images/scene-mobile-@2x-003.jpg 2x" media="(max-width: 1439px)"
+                                type="image/jpg">
+                            <img src="./images/scene-mobile-003.jpg" alt="Сцена №3">
+                        </picture>
                     </div>
                 </li>
             </ul>
@@ -154,7 +186,13 @@
                 <div class="gifts__text"> 
                     <p>Кожен учасник фестивалю отримає прапор України та футболку з гербом</p>
                 </div>
-                <img class="gifts__img" src="./images/gifts-desktop.png" alt="Подарунки">
+                <picture class="gifts__img">
+                    <source srcset="./images/gifts-desktop.png 1x, ./images/gifts-desktop-@2x.png 2x"
+                        media="(min-width: 1440px)" type="image/png">
+                    <source srcset="./images/gifts-mobile.png 1x, ./images/gifts-mobile-@2x.png 2x" 
+                        media="(max-width: 1439px)" type="image/png">
+                    <img src="./images/gifts-mobile.png" alt="Подарунки">
+                </picture>
         </section>
         <!--DONATE-->
         <section class="container donates-container">
@@ -190,8 +228,14 @@
         </address>
         </div>
         <!--SUBSCRIPTION-->
-        <div class="subscription-container">     
-            <img class="subscription__img" src="./images/mail-desktop.jpg" alt="мейл">
+        <div class="subscription-container">
+            <picture class="subscription__img">
+                <source srcset="./images/mail-desktop.jpg 1x, ./images/mail-desktop-@2x.jpg 2x" media="(min-width: 1440px)"
+                    type="image/jpg">
+                <source srcset="./images/mail-mobile.jpg 1x, ./images/mail-mobile-@2x.jpg 2x" media="(max-width: 1439px)"
+                    type="image/jpg">
+                <img src="./images/mail-mobile.jpg" alt="Мейл">
+            </picture>
             <form class="subscription-form">
                 <p class="subscription__title">Щоб дізнаватися усі новини фестивалю, підпишися на нашу розсилку</p>
                 <input class="subscription-form__input" name="user_name" type="text" placeholder="Ім’я">
