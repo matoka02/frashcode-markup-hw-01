@@ -76,8 +76,9 @@ img {
 @media screen and (min-width: 1440px){
     .container{
         width: 1440px;
-        padding-left: auto;
-        padding-right: auto;
+        /* padding-left: auto;
+        padding-right: auto; */
+        /* Ошибка в валидаторе */        
     }    
 }
 
@@ -278,6 +279,7 @@ img {
 }
 @media screen and (min-width: 1440px) {
     .hero__img {
+        
         bottom: 5%;
     }
 }
@@ -319,34 +321,35 @@ img {
 /* --START PROJECTS-- */ 
 
 .project-container {
-    padding-top: 200px;
-    padding-bottom: 100px;
+    width: 100%;
+    padding-top: 14.3rem;
+    padding-bottom: 7.1rem;
+    padding-left: 5%;
+    padding-right: 5%;
 
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-
 @media screen and (min-width: 1440px) {
     .project-container {
-        padding-top: 74px;
-        padding-bottom: 48px;
+        padding-top: 5.3rem;
+        padding-bottom: 3.4rem;
     }
 }
 
 .title {
+    font-weight: 400;
     font-size: 50px;
     line-height: 0.94;
 
     color: var(--primery-text-color-teme-light);
 }
-
 @media screen and (min-width: 391px) and (max-width: 1439px) {
     .title {
         text-align: center;
     }
 }
-
 @media screen and (min-width: 1440px) {
     .title {
         font-size: 60px;
@@ -354,120 +357,112 @@ img {
 }
 
 .title__text {
-    margin-top: 16px;
+    margin-top: 1.14rem;
 
     font-size: 20px;
     line-height: 0.96;
 
     color: var(--primery-text-color-teme-light);
 }
-
 @media screen and (min-width: 391px) and (max-width: 1439px) {
     .title__text {
+        width: 350px;
+        
         text-align: center;
     }
 }
-
 @media screen and (min-width: 1440px) {
     .title__text {
-        margin-top: 10px;
+        margin-top: 0.7rem;
         font-size: 27px;
     }
 }
 
 .title__span {
-    margin-top: 28px;
-    margin-bottom: 56px;
-    max-width: 350px;
-
-    word-wrap: break-word;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 
     font-size: 16px;
     line-height: 1.2;
 
     color: var(--accent-color);
 }
-
 @media screen and (min-width: 391px) and (max-width: 1439px) {
     .title__span {
+        width: 350px;
+
         text-align: center;
     }
 }
+@media screen and (min-width: 1440px){
+    .title__span{
+        margin-top: 1.4rem;
+        margin-bottom: 5.1rem;
+        width: 50%;
 
-@media screen and (min-width: 1440px) {
-    .title__span {
-        margin-top: 20px;
-        margin-bottom: 72px;
-        max-width: 740px;
-
-        text-align: center;
         font-size: 20px;
+        text-align: center;
     }
 }
 
 .program-fest {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
-
 @media screen and (min-width: 1440px) {
     .program-fest {
-        margin-bottom: 60px;
+        margin-bottom: 4.3rem;
     }
 }
 
+/* .program-fest__items{
+    background-color: var(--background-color-teme-dark);
+    border-radius: 0.7rem;
+} */
+
 .program-fest__items:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 2.1rem;
 }
 
-.program__wrapper {
+.program__wrapper{
     display: flex;
     flex-direction: column-reverse;
+    /* align-items: center; */
 
     padding: 0;
 
     background-color: var(--background-color-teme-dark);
-    border-radius: 10px;
+    border-radius: 0.7rem;
 }
-
-@media screen and (min-width: 1200px) and (max-width: 1439px) {
+@media screen and (min-width: 391px) and (max-width: 1439px) {
     .program__wrapper {
+        width: 390px;
         align-items: center;
     }
 }
-
-@media screen and (min-width: 1440px) {
-    .program__wrapper {
+@media screen and (min-width: 1440px){
+    .program__wrapper{
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
-        padding: 40px 40px 74px 40px;
+
+        padding: 2.9rem 2.9rem 5rem 2.9rem;
     }
 }
 
-.program__shedule {
+.program__shedule{
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    margin-left: 16px;
-    margin-bottom: 72px;
-}
 
-@media screen and (min-width: 1200px) and (max-width: 1439px) {
-    .program__shedule {
-        margin-left: 0;
+    padding: 3.2rem 5% 5rem 5%;
+}
+@media screen and (min-width: 1440px){
+    .program__shedule{
+        padding: 0;
     }
 }
 
-@media screen and (min-width: 1440px) {
-    .program__shedule {
-        margin-left: 0;
-        margin-bottom: 0;
-    }
-}
-
-.program__title {
-    margin-top: 44px;
-
+.program__title{
+    font-weight: 400;
     font-size: 30px;
     line-height: 0.95;
     letter-spacing: 0.02em;
@@ -475,24 +470,14 @@ img {
 
     color: var(--primery-text-color-teme-light);
 }
-
-@media screen and (min-width: 1200px) and (max-width: 1439px) {
-    .program__title {
-        margin-left: 0;
-        text-align: center;
-        max-width: 390px;
-    }
-}
-
 @media screen and (min-width: 1440px) {
     .program__title {
-        margin-top: 0;
         font-size: 46px;
     }
 }
 
 .program__subtitle {
-    margin-top: 10px;
+    margin-top: 0.7rem;
 
     font-size: 20px;
     line-height: 0.94;
@@ -501,15 +486,15 @@ img {
 }
 
 .program__items {
-    margin-top: 44px;
+    margin-top: 3.2rem;
 }
 
 .program__item:not(:last-child) {
-    margin-bottom: 50px;
+    margin-bottom: 3.6rem;
 }
 
 .program__name {
-    margin-bottom: 10px;
+    margin-bottom: 0.7rem;
 
     font-size: 16px;
     line-height: 0.97;
@@ -524,19 +509,9 @@ img {
     color: #3D8C9D;
 }
 
-.program__img {
-    width: 350px;
-    height: 254px;
-
-    border-radius: 10px;
-    background-color: var(--via-magenta);
-}
-
-@media screen and (min-width: 1440px) {
-    .program__img {
-        width: 585px;
-        height: 424px;
-    }
+.program__img{
+    border: 1px solid var(--background-color-teme-dark);
+    border-radius: 0.7rem;
 }
 
 @media screen and (max-width: 1439px) {
@@ -546,32 +521,23 @@ img {
 }
 
 .program-fest__btn {
-
-    padding: 20px 36px;
+    padding: 1.4rem 2.6rem;
     border: none;
-    border-radius: 87px;
-
-    letter-spacing: 0.03em;
-    white-space: nowrap;
-    color: var(--primery-text-color-teme-light);
-    background-color: var(--background-color-button);
-    text-transform: uppercase;
-    cursor: pointer;
+    border-radius: 6.2rem;
 
     font-size: 18px;
     line-height: 0.94;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    color: var(--primery-text-color-teme-light);
+    background-color: var(--background-color-button);
 }
 
+
 /* --END PROJECTS-- */
-
-
-
-
-
-
-
-
-
 
 
 /* --START GIFTS- */
@@ -922,7 +888,7 @@ img {
     /* width: 350px;
     height: 240px; */
 
-    background-color: var(--via-magenta);
+    /* background-color: var(--via-magenta); */
 }
 @media screen and (min-width: 1440px) {
     .subscription__img {
