@@ -7,28 +7,18 @@
     <title>Фестиваль Перемоги України</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-        integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header class="container page-header">
+    <header class="page-header">
         <img class="logo__img" src="./images/logo.png" alt="Логотип">
         <nav class="navigation">
-            <ul class="nav-list list">
-                <li class="nav-list__item">
-                    <a href="#contacts" class="nav-list__link link">Контакти</a>
-                </li>
-                <li class="nav-list__item">
-                    <a href="#title" class="nav-list__link link">Головна</a>
-                </li>
-                <li class="nav-list__item">
-                    <a href="#program" class="nav-list__link link">Програма</a>
-                </li>
-                <li class="nav-list__item">
-                    <a href="#" class="nav-list__btn nav-list__link link">Як потрапити</a>
+            <ul class="nav-list">
+                <li class="nav-list__item"><a href="#contacts">Контакти</a></li>
+                <li class="nav-list__item"><a href="#title">Головна</a></li>
+                <li class="nav-list__item"><a href="#program">Програма</a></li>
+                <li class="nav-list__item menu__btn"><a href="#">Як потрапити</a>
                 </li>
             </ul>
         </nav>
@@ -41,16 +31,16 @@
     <main>
         <section class="hero-container">
             <div class="hero__wrapper">
-                <h1 id="title" class="main-title">Фестиваль Перемоги України</h1>
+                <h1 id="title" class="main-title uppercase">Фестиваль Перемоги України</h1>
                 <p class="hero__text">Свято для усіх українців, які працювали, боролися й вірили у перемогу</p>
             </div>
-            <!-- <picture class="hero__img">
+            <picture class="hero__img">
                 <source srcset="./images/Img-desktop.png 1x, ./images/Img-desktop-@2x.png 2x" media="(min-width: 1440px)"
                     type="image/png">
                 <source srcset="./images/Img-mobile.png 1x, ./images/Img-mobile-@2x.png 2x" media="(max-width: 1439px)"
                     type="image/png">
                 <img src="./images/Img-mobile.png" alt="Жінка з флагом">
-                </picture> -->
+                </picture>
             <picture class="hero__background">
                 <source srcset="./images/Img-back-desktop-001.png 1x, ./images/Img-back-desktop-@2x-001.png 2x" media="(min-width: 1440px)"
                     type="image/png">
@@ -58,191 +48,193 @@
                     type="image/png">
                 <img src="./images/Img-mobile.png" alt="none">
             </picture>
-            <!-- <img class="hero__img" src="./images/Img-mobile.png" alt="Жінка з флагом"> -->
-            <!-- <img class="hero__background" src="./images/Img-back-desktop-001.png" alt="none"> -->
         </section>
         <!--PROJECTS-->
-        <section class="container project-container">
-            <h2 id="program" class="title">Програма фестивалю</h2>
-            <span class="title__text">3 сцени, щоб добре й із задоволенням провести час</span>
-            <span class="title__span">Усі сцени розташовані так, щоб вам було зручно ходити між ними, і вони одна одну не глушили</span>
-            <ul class="program-fest">
-                <li class="program-fest__items list">
+        <section class="program">
+            <div class="program-header">
+                <h2>Програма фестивалю</h2>
+                <h3>3 сцени, щоб добре й із задоволенням провести час</h3>
+                <p>Усі сцени розташовані так, щоб вам було зручно ходити між ними, і вони одна одну не глушили</p>
+            </div>
+            <ul>
+                <li class="max-width-wrapper program-fest__items">
                     <div class="program__wrapper">
-                        <div class="program__shedule">
-                            <h3 class="program__title">Сцена Перемоги</h3>
-                            <span class="program__subtitle">Розбудова України після війни</span>
-                            <ul class="program__items">
-                                <li class="program__item list">
-                                    <p class="program__name">Виступ Президента України</p>
-                                    <span class="program__time">10:00-12:00</span>
-                                </li>
-                                <li class="program__item list">
-                                    <p class="program__name">Виступ представників ЄС</p>
-                                    <span class="program__time">13:00-14:00</span>
-                                </li>
-                                <li class="program__item list">
-                                    <p class="program__name">Виступ представників НАТО</p>
-                                    <span class="program__time">14:00-15:00</span>
-                                </li>
-                                <li class="program__item list">
-                                    <p class="program__name">Гімн України</p>
-                                    <span class="program__time">21:25-21:30</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <picture class="program__img">
-                            <source srcset="./images/scene-desktop-001.jpg 1x, ./images/scene-desktop-@2x-001.jpg 2x" media="(min-width: 1440px)"
-                                type="image/jpg">
-                            <source srcset="./images/scene-mobile-001.jpg 1x, ./images/scene-mobile-@2x-001.jpg 2x" media="(max-width: 1439px)"
-                                type="image/jpg">
-                            <img src="./images/scene-mobile-001.jpg" alt="Сцена №1">
-                        </picture>
+                        <h3 class="program__title uppercase">Сцена Перемоги</h3>
+                        <p class="program__subtitle">Розбудова України після війни</p>
+                        <ul>
+                            <li>
+                                <p class="program__name">Виступ Президента України</p>
+                                <span class="program__time">10:00-12:00</span>
+                            </li>
+                            <li>
+                                <p class="program__name">Виступ представників ЄС</p>
+                                <span class="program__time">13:00-14:00</span>
+                            </li>
+                            <li>
+                                <p class="program__name">Виступ представників НАТО</p>
+                                <span class="program__time">14:00-15:00</span>
+                            </li>
+                            <li>
+                                <p class="program__name">Гімн України</p>
+                                <span class="program__time">21:25-21:30</span>
+                            </li>
+                        </ul>
                     </div>
+                    <picture class="program__img">
+                        <source srcset="./images/scene-desktop-001.jpg 1x, ./images/scene-desktop-@2x-001.jpg 2x"
+                            media="(min-width: 600px)" type="image/jpg">
+                        <source srcset="./images/scene-mobile-001.jpg 1x, ./images/scene-mobile-@2x-001.jpg 2x" media="(max-width: 599px)"
+                            type="image/jpg">
+                        <img src="./images/scene-mobile-001.jpg" alt="Сцена №1">
+                    </picture>
                 </li>
-                <li class="program-fest__items list">
+                <li class="max-width-wrapper program-fest__items">
                     <div class="program__wrapper">
-                        <div class="program__shedule">
-                            <h3 class="program__title">Сцена "Музика"</h3>
-                            <ul class="program__items">
-                                <li class="program__item list">
-                                    <p class="program__name">Артем Квасоваров</p>
-                                    <span class="program__time">14:00-15:00</span>
-                                </li>
-                                <li class="program__item list">
-                                    <p class="program__name">Степан Мега</p>
-                                    <span class="program__time">16:00-17:00</span>
-                                </li>
-                                <li class="program__item list">
-                                    <p class="program__name">Гурт “Протитіла”</p>
-                                    <span class="program__time">17:00-18:00</span>
-                                </li>
-                                <li class="program__item list">
-                                    <p class="program__name">Віктор Петрик</p>
-                                    <span class="program__time">18:00-19:00</span>
-                                </li>
-                                <li class="program__item list">
-                                    <p class="program__name">Гурт “Діти Електриків”</p>
-                                    <span class="program__time">19:00-20:00</span>
-                                </li>
-                                <li class="program__item list">
-                                    <p class="program__name">Гурт “Надвірна”</p>
-                                    <span class="program__time">20:00-21:00</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <picture class="program__img">
-                            <source srcset="./images/scene-desktop-002.jpg 1x, ./images/scene-desktop-@2x-002.jpg 2x"
-                                media="(min-width: 1440px)" type="image/jpg">
-                            <source srcset="./images/scene-mobile-002.jpg 1x, ./images/scene-mobile-@2x-002.jpg 2x" media="(max-width: 1439px)"
-                                type="image/jpg">
-                            <img src="./images/scene-mobile-002.jpg" alt="Сцена №2">
-                        </picture>
+                        <h3 class="program__title uppercase">Сцена "Музика"</h3>
+                        <ul>
+                            <li>
+                                <p class="program__name">Артем Квасоваров</p>
+                                <span class="program__time">14:00-15:00</span>
+                            </li>
+                            <li>
+                                <p class="program__name">Степан Мега</p>
+                                <span class="program__time">16:00-17:00</span>
+                            </li>
+                            <li>
+                                <p class="program__name">Гурт “Протитіла”</p>
+                                <span class="program__time">17:00-18:00</span>
+                            </li>
+                            <li>
+                                <p class="program__name">Віктор Петрик</p>
+                                <span class="program__time">18:00-19:00</span>
+                            </li>
+                            <li>
+                                <p class="program__name">Гурт “Діти Електриків”</p>
+                                <span class="program__time">19:00-20:00</span>
+                            </li>
+                            <li>
+                                <p class="program__name">Гурт “Надвірна”</p>
+                                <span class="program__time">20:00-21:00</span>
+                            </li>
+                        </ul>
                     </div>
+                    <picture class="program__img">
+                        <source srcset="./images/scene-desktop-002.jpg 1x, ./images/scene-desktop-@2x-002.jpg 2x"
+                            media="(min-width: 600px)" type="image/jpg">
+                        <source srcset="./images/scene-mobile-002.jpg 1x, ./images/scene-mobile-@2x-002.jpg 2x" media="(max-width: 599px)"
+                            type="image/jpg">
+                        <img src="./images/scene-mobile-002.jpg" alt="Сцена №2">
+                    </picture>
                 </li>
-                <li class="program-fest__items list">
+                <li class="max-width-wrapper program-fest__items">
                     <div class="program__wrapper">
-                        <div class="program__shedule">
-                            <h3 class="program__title">Сцена "Майстер-класи для дітей"</h3>
-                            <ul class="program__items">
-                                <li class="program__item list">
-                                    <p class="program__name">Музей науки</p>
-                                    <span class="program__time">14:00-15:00</span>
-                                </li>
-                                <li class="program__item list">
-                                    <p class="program__name">Майстер-клас з ліплення</p>
-                                    <span class="program__time">16:00-17:00</span>
-                                </li>
-                                <li class="program__item list">
-                                    <p class="program__name">Майстер-клас з машинобудування</p>
-                                    <span class="program__time">17:00-18:00</span>
-                                </li>
-                                <li class="program__item list">
-                                    <p class="program__name">Майстер-клас з роботехінки</p>
-                                    <span class="program__time">18:00-19:00</span>
-                                </li>
-                                <li class="program__item list">
-                                    <p class="program__name">Майстер-клас з малювання хною</p>
-                                    <span class="program__time">19:00-20:00</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <picture class="program__img">
-                            <source srcset="./images/scene-desktop-003.jpg 1x, ./images/scene-desktop-@2x-003.jpg 2x"
-                                media="(min-width: 1440px)" type="image/jpg">
-                            <source srcset="./images/scene-mobile-003.jpg 1x, ./images/scene-mobile-@2x-003.jpg 2x" media="(max-width: 1439px)"
-                                type="image/jpg">
-                            <img src="./images/scene-mobile-003.jpg" alt="Сцена №3">
-                        </picture>
+                        <h3 class="program__title">Сцена "Майстер-класи для дітей"</h3>
+                        <ul>
+                            <li>
+                                <p class="program__name">Музей науки</p>
+                                <span class="program__time">14:00-15:00</span>
+                            </li>
+                            <li>
+                                <p class="program__name">Майстер-клас з ліплення</p>
+                                <span class="program__time">16:00-17:00</span>
+                            </li>
+                            <li>
+                                <p class="program__name">Майстер-клас з машинобудування</p>
+                                <span class="program__time">17:00-18:00</span>
+                            </li>
+                            <li>
+                                <p class="program__name">Майстер-клас з роботехінки</p>
+                                <span class="program__time">18:00-19:00</span>
+                            </li>
+                            <li>
+                                <p class="program__name">Майстер-клас з малювання хною</p>
+                                <span class="program__time">19:00-20:00</span>
+                            </li>
+                        </ul>
                     </div>
+                    <picture class="program__img">
+                        <source srcset="./images/scene-desktop-003.jpg 1x, ./images/scene-desktop-@2x-003.jpg 2x"
+                            media="(min-width: 600px)" type="image/jpg">
+                        <source srcset="./images/scene-mobile-003.jpg 1x, ./images/scene-mobile-@2x-003.jpg 2x" media="(max-width: 599px)"
+                            type="image/jpg">
+                        <img src="./images/scene-mobile-003.jpg" alt="Сцена №3">
+                    </picture>
                 </li>
             </ul>
-            <button class="program-fest__btn" type="button">Дізнатися більше</button>
+            <button class="menu__btn button" type="button">Дізнатися більше</button>
         </section>
         <!--GIFTS-->        
-        <section class="container gifts-container">
+        <section class="gifts-container">
             <h2 class="visuality-hidden">Подарунки</h2>
-            <div class="gifts__background" ></div>
-                <div class="gifts__text"> 
-                    <p>Кожен учасник фестивалю отримає прапор України та футболку з гербом</p>
-                </div>
-                <picture class="gifts__img">
-                    <source srcset="./images/gifts-desktop.png 1x, ./images/gifts-desktop-@2x.png 2x"
-                        media="(min-width: 1440px)" type="image/png">
-                    <source srcset="./images/gifts-mobile.png 1x, ./images/gifts-mobile-@2x.png 2x" 
-                        media="(max-width: 1439px)" type="image/png">
-                    <img src="./images/gifts-mobile.png" alt="Подарунки">
+            <img class="gift__img" src="./images/Img-back-desktop-002.png"/>
+            <div class="max-width-wrapper gifts__background" >
+                <picture class="gifts__img-shirt gift-shirt">
+                    <source srcset="./images/gifts-desktop-shirt.png 1x, ./images/gifts-desktop-shirt-@2x.png 2x" media="(min-width: 600px)"
+                        type="image/png">
+                    <source srcset="./images/gifts-mobile-shirt.png 1x, ./images/gifts-mobile-shirt-@2x.png 2x" media="(max-width: 599px)"
+                        type="image/png">
+                    <img src="./images/gifts-mobile-shirt.png" alt="Подарунки">
                 </picture>
+                <picture class="gifts__img-flag gift-flag">
+                    <source srcset="./images/gifts-desktop-flag.png 1x, ./images/gifts-desktop-flag-@2x.png 2x" media="(min-width: 600px)"
+                        type="image/png">
+                    <source srcset="./images/gifts-mobile-flag.png 1x, ./images/gifts-mobile-flag-@2x.png 2x" media="(max-width: 599px)"
+                        type="image/png">
+                    <img src="./images/gifts-mobile-flag.png" alt="Подарунки">
+                </picture>
+                <p class="gift__text">Кожен учасник фестивалю отримає прапор України та футболку з гербом</p>
+            </div>
         </section>
         <!--DONATE-->
-        <section class="container donates-container">
-            <h2 class="donate__title">Як потрапити</h2>
+        <section class="donates-container">
+            <h2>Як потрапити</h2>
             <p class="donate__subtitle">Фестиваль безкоштовний. Будемо збирати пожертви для відбудови зруйнованих українських міст та сіл.</p>
-            <p class="donate__text">Наша мета 10 000 000 гривень!</p>
-            <ul class="donate__moneys">
-                <li class="donate_money list">00</li>
-                <li class="donate_money list">230</li>
-                <li class="donate_money list">025</li>
+            <h3>Наша мета 10 000 000 гривень!</h3>
+            <ul>
+                <li>00</li>
+                <li>230</li>
+                <li>025</li>
             </ul>
-            <button class="donate__btn" type="button">Зробити пожертву</button>
+            <button class="menu__btn button" type="button">Зробити пожертву</button>
         </section>
     </main>
-    <footer class="container footer-container">
+    <footer>
         <!--CONTACTS-->
-        <div class="contact-container">
-        <p id="contacts" class="contact__title">Контакти</p>
+        <section class="max-width-wrapper contacts">
+        <h2 id="contacts">Контакти</h2>
         <address class="contact__address">
-            <a class="contact__link link" href="tel:+380987654321">
-            <img src="./images/logo-phone.png" alt="logo-phone">
-            </a>
-            <p class="contact__text">Якщо у вас виникають питання – телефонуйте за номером <br> <b>0-987-654-321</b></p>
-            <div class="contact__links">
-            <a class="contact__link link" href="#">
-                <img src="./images/logo-telegram.png" alt="logo-telegram">
-            </a>
-            <a class="contact__link link" href="#">
-                <img src="./images/logo-whatsapp.png" alt="logo-whatsapp">
-            </a>
+            <div>
+                <img src="./images/logo-phone.png" alt="logo-phone">
+                <p>
+                    Якщо у вас виникають питання – телефонуйте за номером
+                    <a class="contact__number" href="tel:+380987654321">0-987-654-321</a>
+                </p>
             </div>
-            <p class="contact__text">Або пишіть нам у чат-бот</p>
+            <div class="contact__messenger">
+                <img src="./images/logo-telegram.png" alt="logo-telegram">
+                <img src="./images/logo-whatsapp.png" alt="logo-whatsapp">
+                <p>Або пишіть нам у чат-бот</p>
+            </div>
         </address>
-        </div>
+        </section >
         <!--SUBSCRIPTION-->
-        <div class="subscription-container">
+        <section class="max-width-wrapper subscription-container">
             <picture class="subscription__img">
-                <source srcset="./images/mail-desktop.jpg 1x, ./images/mail-desktop-@2x.jpg 2x" media="(min-width: 1440px)"
+                <source srcset="./images/mail-desktop.jpg 1x, ./images/mail-desktop-@2x.jpg 2x" media="(min-width: 600px)"
                     type="image/jpg">
-                <source srcset="./images/mail-mobile.jpg 1x, ./images/mail-mobile-@2x.jpg 2x" media="(max-width: 1439px)"
+                <source srcset="./images/mail-mobile.jpg 1x, ./images/mail-mobile-@2x.jpg 2x" media="(max-width: 599px)"
                     type="image/jpg">
                 <img src="./images/mail-mobile.jpg" alt="Мейл">
             </picture>
-            <form class="subscription-form">
+            <div class="subscription__wrapper">
                 <p class="subscription__title">Щоб дізнаватися усі новини фестивалю, підпишися на нашу розсилку</p>
-                <input class="subscription-form__input" name="user_name" type="text" placeholder="Ім’я">
-                <input class="subscription-form__input" name="user_mail" type="email" placeholder="Емейл">
-                <button class="subscription-form__btn" type="submit">Підписатися</button>
-            </form>
-        </div>
+                <form>
+                    <input name="user_name" type="text" placeholder="Ім’я">
+                    <input name="user_mail" type="email" placeholder="Емейл">
+                    <button class="menu__btn subscription-form__btn button" type="submit">Підписатися</button>
+                </form>
+            </div>
+        </section>
     </footer>
 </body>
 </html>
