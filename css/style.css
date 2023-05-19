@@ -1,0 +1,688 @@
+/* если нужно подключить css к нескольким html */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap');
+
+:root {
+    --primery-text-color-teme-light: #000000;
+    --secondary-text-color-teme-light: #3D8C9D;
+    --accent-color: #73A6B1;
+    --via-magenta: #FF0090;
+    --background-color-teme-dark: #F1FDFF;
+    --background-color-teme-light: #F9FADF;
+    --background-color-button: #7AE5FD;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* img {
+    max-width: 100%;
+} */
+
+.accent {
+    color: var(--accent-color);
+}
+
+.visuality-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(0 0 0 0);
+    overflow: hidden;
+}
+
+
+/* --START COMMON-- */
+/* Общие стилевые правила, которые часто встречаются на странице, можно вынести в отдельные селекторы для уменьшения кода и возможности переиспользовать их в разных местах страницы (н-р, ограничение максимальной ширины опред.блоков, которые занимают 75% экрана и стоят посередине
+*/
+
+.max-width-wrapper {
+    max-width: 75vw;
+    margin: 0 auto;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.menu__btn {
+    background-color: var(--background-color-button);
+    border: none;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 80px;
+    text-transform: uppercase;
+}
+
+.button {
+    padding: 1.3rem 2.1rem;
+    display: block;
+    margin: 5vh auto;
+
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 0.96;
+}
+
+/* --END COMMON-- */
+
+
+/* --START HEADER-- */
+
+.page-header {
+    width: 100%;
+    position: fixed;
+    top: 3%;
+
+    padding: 0 2%;
+    box-sizing: border-box;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.125rem;
+    /* если rem = 16px, то размер шрифта хедера будeт 18px*/
+}
+
+.mobile-menu-btn {
+    display: none;
+}
+
+.logo__img {
+    width: 65px;
+    height: 65px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-list__item {
+    margin: 0 1em;
+}
+
+/* --END HEADER-- */
+
+
+/* --START HERO-- */
+
+.hero-container {
+    max-width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    
+    background-color: var(--background-color-teme-dark);
+}
+
+.hero__wrapper {
+    max-width: 50%;
+    margin-left: 3%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 6.5rem;
+    font-weight: 800;
+    letter-spacing: -2%;
+
+    color: #9AD2DE;
+}
+
+.hero__text {
+    width: 80%;
+    margin-top: 8%;
+
+    font-size: 1.5rem;
+}
+
+.hero__img {
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+    z-index: 2;
+
+    width: 70%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.hero__background {
+    position: absolute;
+    bottom: -5%;
+    right: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+/* --END HERO-- */
+
+
+/* --START PROJECTS-- */
+
+.program-header {
+    margin: 15vh auto 10vh;
+    /* Для отступов, формирующих высоту элементов, лучше всего использовать относительные единицы вьюпорта. Так пропорции будут сохраняться относительно размеров экрана*/
+    text-align: center;
+    /* font-size: 1.25rem; */
+    /* Фиксируем 20px как размер текста этого блока, заголовки в этом блоке будут вычислять свои размеры от него */
+}
+
+.program-header h2 {
+    margin-bottom: 1rem;
+
+    font-size: 3.750rem;
+    text-transform: uppercase;
+}
+
+.program-header h3 {
+    font-size: 1.690rem;
+}
+
+.program-header p {
+    max-width: 60%;
+
+    margin: 1rem auto;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+
+    color: var(--accent-color);
+}
+
+
+.program-fest__items {
+    padding: 5%;
+    margin: 3% auto;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    font-size: 1rem;
+    
+    background-color: var(--background-color-teme-dark);
+}
+
+.program__title {
+    margin-top: 2.812rem;
+
+    font-size: 1.875em;
+}
+
+.program__subtitle {
+    margin-top: 0.625rem;
+
+    font-size: 1.25rem;
+}
+
+
+/*
+Если бы в макете сцены было одинаковое количество элементов, то можно было бы использовать разравнивание флексами, 
+поскольку элементы тогда равномерно распределялись в пространстве родительского элемента. Тогда можно было бы использовать такой прием: родительский флекс-контейнер задает размер дочернему флекс-контейнеру за счет высоты картинки, а дочерний "растет" на все доступное пространство и занимает ширину, которая осталась от картинки. Таким образом, сам контейнер получает размеры, и внутри него все элементы списка можно равномерно распределить через space-evenly..
+
+.program__wrapper {
+    display: flex;
+    flex-direction: column; 
+} 
+
+.program__wrapper ul {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+} 
+*/
+
+/* Но к сожалению, реальность макета такова, что в секциях сцены разное количество элементов (где-то в программе 4 участника,  где-то 6, где-то 5) и единственный способ справиться в такой ситуации - просто давать элементам одинаковые отступления  пропорционально зависящие от размера текста) */
+
+.program__wrapper ul li {
+    margin-top: 3.125rem;
+}
+
+.program__name {
+    margin-bottom: 0.625rem;
+}
+
+.program__time {
+    color: var(--secondary-text-color-teme-light);
+}
+
+.program__img {
+    max-width: 100%;
+    
+    border-radius: 10px;
+    align-self: center;
+}
+
+/* --END PROJECTS-- */
+
+
+/* --START GIFTS-- */
+
+.gifts-container {
+    position: relative;
+    margin: 25vh 0;
+    padding: 3vh 0;
+}
+
+.gift__img {
+    position: absolute;
+    top: -50%;
+    left: 8%;
+    width: 85%;
+}
+
+.gifts__background {
+    position: relative;
+    padding: 6% 3%;
+    margin-top: 3%;
+
+    border-radius: 10px;
+    background-color: var(--background-color-teme-dark);
+}
+
+.gift__text {
+    max-width: 40%;
+
+    font-size: 1.68rem;
+    line-height: 2rem;
+}
+
+.gifts__img-shirt {
+    position: absolute;
+    top: -25%;
+    right: 5%;
+    width: 30%;
+}
+
+.gifts__img-flag {
+    position: absolute;
+    right: 0;
+    top: -2%;
+    width: 20%;
+}
+
+/* --END GIFTS-- */
+
+
+/* --START DONATE-- */
+
+.donates-container {
+    margin: 5vh 0;
+
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.donates-container h2 {
+    margin: 0.5rem 0;
+
+    font-size: 3.125rem;
+    text-transform: uppercase;
+}
+
+.donates-container h3 {
+    margin: 3.5rem 0 1rem;
+
+    font-size: 1.35em;
+}
+
+.donate__subtitle {
+    max-width: 50%;
+    margin: 0 auto;
+
+    text-align: inherit;
+
+    color: var(--accent-color);
+}
+
+.donates-container ul {
+    display: flex;
+    justify-content: center;
+}
+
+.donates-container ul li {
+    padding: 0 0.15rem;
+
+    font-size: 3.75rem;
+    border-left: 3px solid #9AD2DE;
+
+}
+
+.donates-container ul li:first-of-type {
+    border: none;
+}
+
+/* --END DONATE-- */
+
+
+/* --START FOOTER-- */
+
+footer {
+    padding: 5% 1%;
+    margin-top: 13vh;
+
+    background-color: var(--background-color-teme-light);
+    background-image: url('../images/Img-back-desktop-003.png');
+    background-repeat: no-repeat;
+
+    font-size: 1.25rem;
+}
+
+/* --END FOOTER-- */
+
+
+/* --START CONTACTS-- */
+
+.contacts {
+    margin-bottom: 5%;
+
+    display: flex;
+    flex-direction: row;     
+}
+
+.contacts h2 {
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.contact__address {
+    max-width: 35%;
+    margin-left: 25%;
+    
+    line-height: 1.2em;
+}
+
+.contact__messenger {
+    margin-top: 15%;
+}
+
+.contact__number {
+    display: block;
+
+    font-weight: 700;
+}
+
+/* --END CONTACTS-- */
+
+
+/* --START SUBSCRIPTION-- */
+
+.subscription-container {
+    padding: 5%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: #ffffff;
+}
+
+.subscription__img {
+    max-width: 40%;
+
+    object-fit: cover;
+}
+
+.subscription__wrapper {
+    max-width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subscription__title {
+    margin-bottom: 5%;
+
+    font-size: 1.35em;
+    line-height: 1.18em;
+}
+
+.subscription__wrapper form {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscription__wrapper input {
+    padding: 1em 2em;
+    margin-bottom: 6%;
+
+    border: none;
+    border-radius: 60px;
+
+    font-size: 1em;
+
+    background-color: var(--background-color-teme-light);
+}
+
+.subscription__wrapper input::placeholder {
+    color: #000000;
+}
+
+.subscription-form__btn {
+    font-size: 1em;
+}
+
+/* --END SUBSCRIPTION-- */
+
+
+/* --START MEDIA QUERIES-- */
+
+@media screen and (max-width: 600px) {
+
+    .logo__img, .nav-list, .gift__img {
+        display: none;
+    }
+
+    /* Header */ 
+
+    .hero__wrapper,
+    .program-header p, 
+    .gift__text, 
+    .contact__address, 
+    .subscription__wrapper, 
+    .subscription__img, 
+    .donates-container .donate__subtitle {
+        max-width: none;
+    }
+
+
+    .mobile-menu-btn {
+        width: 40px;
+        height: 40px;
+        
+        display: flex;
+        align-items: center;
+
+        border: none;
+        line-height: 0;
+
+        background-color: transparent;
+        fill: var(--background-color-button);
+        cursor: pointer;
+
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-menu-btn:hover,
+    .mobile-menu-btn:focus {
+        fill: var(--accent-color);
+    }
+    
+    .page-header {
+        justify-content: flex-end;
+        top: 0;
+    }
+
+    /* Hero */
+
+    .main-title {
+        font-size: 3.125rem;
+    }
+
+    .hero__text {
+        font-size: 1rem;
+    }
+
+    .hero-container {
+        padding-top: 20%;
+
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        overflow: hidden;
+    }
+
+    .hero__img {
+        position: relative;
+
+        width: 100%;
+        height: 60%;
+    }
+
+    .hero__background {
+        position: absolute;
+        bottom: -5%;
+        /* left: 25%; */
+        left: 0;
+        width: 100%;
+        z-index: 0;
+
+        object-fit: cover;
+    }
+
+    /* Projects */
+    .program-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .program-fest__items {
+        margin-bottom: 7%;
+
+        flex-direction: column-reverse;
+    }
+
+    .program__title {
+        font-size: 2.875rem;
+    }
+
+    .program__img {
+        /* max-width: 390px; */
+        max-width: 350px;
+        margin-bottom: 15%;
+    }
+
+    .program button {
+        display: none;
+    }
+
+    /* Gifts */
+
+    .gifts-container {
+        margin: 20vh 0 10vh;
+    }
+
+    .gift__text {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+    .gifts__img-shirt {
+        width: 100%;
+    }
+
+    .gifts__img-flag {
+        position: relative;
+        width: 50%;
+        left: 50%;
+    }
+
+    /* Donate */
+
+    .program-header h2, .donates-container h2, .contacts h2 {
+        font-size: 3.125rem;
+    }
+
+    .donates-container {
+        padding: 3%;
+        margin: 0;
+
+        text-align: start;
+    }
+
+    .donates-container h3 {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .donates-container ul li {
+        padding: 0 3px;
+    }
+    
+    /* Footer */
+
+    footer {
+        margin-top: 3vh;
+        font-size: 1rem;
+        padding-top: 10%;
+    }
+
+    .subscription-container, .contacts {
+        flex-direction: column;
+    }
+
+    /* Contacts */
+
+    .contact__address {
+        margin-left: 0;
+        margin-top: 15%;
+    }
+
+    .contacts {
+        margin: 0;
+        padding: 5%;
+    }
+
+    /* Subscription */
+
+    .subscription-container {
+        margin-top: 10%;
+    } 
+
+    .subscription__img {
+        width: 100%;
+    }
+    .subscription__title {
+        margin: 20% 0;
+    }
+
+    .subscription__wrapper input {
+        margin-bottom: 10%;
+    }
+    
+}
+
+/* --END MEDIA QUERIES-- */
